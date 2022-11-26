@@ -5,28 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI based price prediction</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/main.css')}}" type="text/css">
 </head>
-<body style="text-align: center;">
+<body>
+    <img src="{{url_for('static',filename='/images/car.png')}}"/>
     <h1>Used car price prediction by Nilay</h1>
     <form action="predict" method="post">
-        <input  type="number" name="kms" placeholder="Enter kms" min="1" max="10000000" required/>
-        <input  type="number" name="car_age" placeholder="Enter car age" min="1" max="100" required/>
-        <input  type="number" name="original_price" placeholder="Enter original price" min="10000" max="50000000" required/>
-        
-        <select name="fuel">
+        <input class="txt"  type="number" name="kms" placeholder="Enter kms" min="1" max="10000000" required/>
+        <input class="txt"  type="number" name="car_age" placeholder="Enter car age" min="1" max="100" required/>
+        <input class="txt"  type="number" name="original_price" placeholder="Enter original price" min="10000" max="50000000" required/>
+        <br>
+        <select name="fuel" class="txt">
             <option value="Select">Select fuel</option>
             <option value="Petrol">Petrol</option>
             <option value="Diesel">Diesel</option>
             <option value="CNG">CNG</option>
         </select>
 
-        <select name="transmission">
+        <select name="transmission" class="txt">
             <option value="Select">Select transmission</option>
             <option value="Manual">Manual</option>
             <option value="Automatic">Automatic</option>
          
         </select>    
-
+        <br>
         <button>Predict Price</button>
     
     </form>

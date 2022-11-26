@@ -9,7 +9,8 @@ model=pickle.load(open('./models/lr_model.pkl','rb'))
 def homepage():
     return render_template('homepage.html')
 
-@app.route("/predict",methods=['POST','GET'])
+
+@app.route("/predict",methods=['POST'])
 def predict():
     kms=float(request.form['kms'])
     car_age=float(request.form['car_age'])
